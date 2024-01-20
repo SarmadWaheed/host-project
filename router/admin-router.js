@@ -2,7 +2,7 @@ const express=require("express");
 const router=express.Router();
 const authadmin=require('../controller/admin-controller');
 const authmiddleware=require('../middleware/authmiddleware');
-const adminmiddleware=require('../middleware/admin-middleware');
+
 
 router.get('/user',authmiddleware,authadmin.getusersdata);
 router.get('/user/:id',authmiddleware,authadmin.getsingleuserdata);
